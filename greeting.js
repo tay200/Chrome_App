@@ -10,17 +10,17 @@ function saveName(text) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  const currentValue = input.value;
+  const currentValue = input.value; // 입력값을 가져옴
   paintGreeting(currentValue);
   saveName(currentValue);
 }
 
 function askForName() {
-  form.classList.add(SHOWING_CN);
+  form.classList.add(SHOWING_CN); // 클래스 값 추가
   form.addEventListener("submit", handleSubmit);
 }
 
-function paintGreeting(text) {
+function paintGreeting(text) { // .showing -> display : block
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `Hello ${text}`;

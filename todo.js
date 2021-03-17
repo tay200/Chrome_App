@@ -10,7 +10,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     const btn = event.target; //이벤트가 발생된 요소
     const li = btn.parentNode;
     toDoList.removeChild(li);
-    const cleanToDos = toDos.filter(function(toDo){
+    const cleanToDos = toDos.filter(function(toDo){ // 지정된 조건에 맞는 요소를 새롭게 반환
       return toDo.id !== parseInt(li.id);
     });
     toDos = cleanToDos;

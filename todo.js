@@ -7,7 +7,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
   let toDos = [];
 
   function deleteTodo(event){
-    const btn = event.target;
+    const btn = event.target; //이벤트가 발생된 요소
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo){
